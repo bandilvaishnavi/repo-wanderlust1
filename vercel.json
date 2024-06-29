@@ -1,21 +1,20 @@
 {
-    "version": 2,
-    "functions": {
-      "api/*.js": {
-        "maxDuration": 10
-      }
-    },
-    "builds": [
-      {
-        "src": "app.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "app.js"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "ATLASDB_URL": "mongodb+srv://Vaishnavi:gnjDhiqY2NSCGuK5@cluster0.9qz79nq.mongodb.net/test?retryWrites=true&w=majority",
+    "SECRET": "fknkddlfrlfc"
   }
-  
+}
